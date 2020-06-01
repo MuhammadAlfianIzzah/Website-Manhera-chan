@@ -1,0 +1,439 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+.burger {
+    display: none;
+    height: 15px;
+    align-items: end;
+    margin-left: 10px;
+
+    /* align-content: space-between; */
+    justify-content: space-between;
+    flex-direction: column;
+    /* background-color: teal; */
+    /* margin-top: 10px; */
+    /* margin-bottom: 20px; */
+}
+
+.burger span {
+    width: 17px;
+    height: 3px;
+    background-color: black;
+}
+
+div.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* border: 1px solid red; */
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    margin: auto;
+    grid-template-rows: 50px;
+    align-items: center;
+    /* border: 1px solid red; */
+    /* background-color: teal; */
+}
+
+nav h1 {
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    padding-top: 5px;
+    font-size: 2em;
+    color: black;
+    font-weight: 100;
+    letter-spacing: 2px;
+    /* padding-left: 10px; */
+}
+
+nav ul {
+    text-align: center;
+    padding-right: 10px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    column-gap: 0px;
+}
+
+nav ul li {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 2px;
+    /* background-color: black; */
+}
+
+.container header {
+    width: 95vw;
+    margin: auto;
+    /* background-color: pink; */
+    display: grid;
+    grid-template-areas:
+        "feature-1 feature-2 feature-3 "
+        "feature-1 feature-2 feature-4"
+    ;
+    grid-template-columns: 2fr repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, minmax(150px, 1fr));
+    gap: 4px;
+}
+
+.container header .feature-1 {
+    background-image: url(img/cloud.png);
+    background-position: center;
+    background-size: cover;
+    grid-area: feature-1;
+}
+
+.container header .feature-2 {
+    background-image: url(img/manhera2.jpg);
+    /* background-position: center; */
+    background-size: cover;
+    grid-area: feature-2;
+}
+
+.container header .feature-3 {
+    background-image: url(img/umbrella.jpg);
+    background-size: 30vw;
+    background-position: 20px;
+    /* background-size: cover; */
+    grid-area: feature-3;
+}
+
+.container header .feature-4 {
+    /* border: 1px solid black; */
+    background-image: url(img/rabbit.jpg);
+    background-position: 20px -50px;
+    background-size: 90%;
+    grid-area: feature-4;
+}
+
+.panel {
+    /* border: 1px solid red; */
+    display: grid;
+    width: 95vw;
+    gap: 10px;
+    grid-template-areas:
+        "panel-1 panel-2 panel-3 panel-4";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+    grid-template-rows: 150px;
+    margin: 20px auto;
+}
+
+.panel .panel-1 {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    /* padding: 40px; */
+    /* text-align: justify; */
+    grid-area: panel-1;
+    width: 100%;
+    /* text-align: center; */
+    /* background-color: teal; */
+    border: 1px solid black;
+}
+
+.panel .panel-1 p {
+    display: block;
+    font-size: .5em;
+}
+
+.panel .panel-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    grid-area: panel-2;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    /* background-color: aqua; */
+}
+
+.panel .panel-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    grid-area: panel-3;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    /* background-color: royalblue; */
+}
+
+.panel .panel-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: color;
+    grid-area: panel-4;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* Setting content */
+.content {
+    gap: 4px;
+    display: grid;
+    /* border: 1px solid red; */
+    width: 95vw;
+    margin: auto;
+    grid-template-areas:
+        "content-1 content-2 content-3 content-4 content-6 content-8"
+        "content-1 content-2 content-3 content-5 content-7 content-8";
+    grid-template-columns: 2fr .8fr 1.5fr repeat(3, 1fr);
+    grid-template-rows: 150px 150px;
+    overflow: hidden;
+}
+
+.content>* {
+    cursor: pointer;
+}
+
+.content .content-1:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.content .content-1 {
+    opacity: .8;
+    transition: 300ms ease-in;
+    background-image: url('img/halo.png');
+    background-size: cover;
+
+    grid-area: content-1;
+}
+
+.content .content-2 {
+    grid-area: content-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+
+
+.content .content-2 h4 {
+    font-size: 1.2em;
+}
+
+.content .content-3 {
+    opacity: .8;
+    /* background-color: red; */
+    grid-area: content-3;
+    background-image: url('img/socute.jpg');
+    background-size: cover;
+    transition: 300ms ease;
+}
+
+.content .content-3:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+
+.content .content-4 {
+    background-image: url('img/cute2.gif');
+    background-size: cover;
+    grid-area: content-4;
+    transition: 900ms ease-out;
+}
+
+.content .content-4:hover {
+    transform: scale(1.1) rotate(360deg);
+    opacity: 1;
+}
+
+.content .content-5 {
+    background-image: url('img/cute1.jpg');
+    background-size: cover;
+    grid-area: content-5;
+}
+
+.content .content-6 {
+    background-image: url('img/o.jpg');
+    background-size: cover;
+    grid-area: content-6;
+}
+
+.content .content-7 {
+    background-image: url('img/cute0.jpg');
+    background-size: cover;
+    grid-area: content-7;
+}
+
+.content .content-8 {
+    background-image: url('img/socute.jpg');
+    background-size: cover;
+    /* border: 1px solid red; */
+    transform: scaleX(-1);
+    grid-area: content-8;
+}
+
+
+
+
+
+
+/* Breakpoint */
+
+@media(max-width:500px) {
+
+    nav {
+        position: relative;
+    }
+
+    nav ul li {
+        color: white;
+    }
+
+    nav ul {
+        position: absolute;
+        flex-direction: column;
+
+        display: flex;
+        top: 0px;
+        /* opacity: .6; */
+        left: -20px;
+        background-color: black;
+        transform: translateY(-100%);
+        transition: 500ms ease-out;
+        opacity: 0;
+    }
+
+
+    nav ul.active {
+        z-index: 88;
+        transform: translateY(0%);
+        height: 100vh;
+        opacity: 1;
+    }
+
+    nav ul li:nth-child(1) {
+        margin-top: 30px;
+    }
+
+    nav ul li {
+
+        width: 100vw;
+        height: 20vh;
+    }
+
+    .burger {
+        position: absolute;
+        top: -3px;
+        right: 20px;
+        z-index: 99;
+        display: flex;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .burger.click {
+        right: 230px;
+    }
+
+
+    .burger span {
+        transition: 300ms ease-in;
+    }
+
+    .burger.click span:nth-child(1) {
+        background-color: white;
+        transform: rotate(45deg) translate(5px, -1px);
+        transform-origin: 0 0;
+    }
+
+    .burger.click span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.click span:nth-child(3) {
+        background-color: red;
+        transform: rotate(-45deg) translate(-1px, 2px);
+        transform-origin: 0 0;
+
+    }
+
+    nav div {
+        display: none;
+    }
+
+    .container header {
+
+        grid-template-areas: "feature-1 feature-2 feature-3 "
+            "feature-1 feature-2 feature-4"
+        ;
+        grid-template-columns: 1fr repeat(2, minmax(100px, 1fr));
+        grid-template-rows: repeat(2, minmax(150px, 1fr));
+        gap: 6px;
+    }
+
+    .container header .feature-3 {
+        /* border: 1px solid black; */
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .container header .feature-2 {
+        /* border: 1px solid black; */
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    header#jumbo {
+        position: relative;
+    }
+
+    header::after {
+        display: inline;
+        position: absolute;
+        content: 'Manhera-chan';
+        /* width: 100vw; */
+        /* margin-left: 200px; */
+        bottom: 0;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(5, 5, 5, 0.9);
+
+        /* position: relative; */
+
+        font-weight: 800;
+        right: 150px;
+        letter-spacing: 2px;
+        font-size: 1.3em;
+        /* border: 1px solid red; */
+        text-align: center;
+    }
+
+    .panel {
+
+        grid-template-areas: "panel-1 panel-2 panel-3"
+            "panel-4 panel-4 panel-4";
+        grid-template-rows: 150px 150px;
+
+    }
+
+}
